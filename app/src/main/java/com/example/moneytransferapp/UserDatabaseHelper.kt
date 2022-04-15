@@ -37,7 +37,10 @@ class UserDatabaseHelper(context: Context, factory: SQLiteDatabase.CursorFactory
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-
+        if(oldVersion != newVersion){
+            db?.execSQL("DROP TABLE IF EXISTS $TABLE_NAME")
+            onCreate(db)
+        }
     }
 
     companion object{
