@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper
 
 class UserDatabaseHelper(context: Context?, factory: SQLiteDatabase.CursorFactory?): SQLiteOpenHelper(context, DATABASE_NAME, factory, DATABASE_VERSION) {
     companion object{
-        private val DATABASE_NAME = "banking_app"
+        private val DATABASE_NAME = "users.db"
         private val DATABASE_VERSION = 1
         val TABLE_NAME = "Users"
         val ACCOUNT_NUM_COL = "account_num"
