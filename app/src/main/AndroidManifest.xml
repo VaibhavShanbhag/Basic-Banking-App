@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MoneyTransferApp">
         <activity
+            android:name=".TransferAmount"
+            android:exported="false" />
+        <activity
+            android:name=".SendToUserList"
+            android:exported="false" />
+        <activity
             android:name=".UserAccountDetails"
             android:exported="false" />
         <activity

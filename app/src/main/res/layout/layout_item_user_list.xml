@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="12dp"
+    android:background="@drawable/cardview_round"
+    android:id="@+id/cardView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvaccountnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Account No: 20220401"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/background"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_person_24"/>
+
+            <TextView
+                android:id="@+id/tvaccountname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vaibhav Shanbhag"
+                android:textSize="15sp"
+                android:layout_marginLeft="2dp"
+                android:textColor="@color/background"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

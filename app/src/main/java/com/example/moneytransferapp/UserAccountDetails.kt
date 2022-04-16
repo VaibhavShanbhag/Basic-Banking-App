@@ -1,6 +1,7 @@
 package com.example.moneytransferapp
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.database.Cursor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,9 +14,9 @@ class UserAccountDetails : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_user_account_details)
 
-        val accountNum = intent.getStringExtra("AccountNum")
+        val accountNum = intent.getStringExtra("AccountNum").toString()
         val userDbHelper: UserDatabaseHelper = UserDatabaseHelper(this,null)
-        val cursor: Cursor? = accountNum?.let { userDbHelper.readSpecificData(it) }
+        val cursor: Cursor = userDbHelper.readSpecificData(accountNum)
 
         if(cursor != null)
             cursor.moveToFirst()
@@ -35,7 +36,11 @@ class UserAccountDetails : AppCompatActivity() {
             finish()
         }
 
-
-
+        btntransfer.setOnClickListener {
+            Intent(this,SendToUserList::class.java).also {
+                it.putExtra("accountNum",accountNum)
+                startActivity(it)
+            }
+        }
     }
 }

@@ -63,4 +63,11 @@ class UserDatabaseHelper(context: Context?, factory: SQLiteDatabase.CursorFactor
         val query = "update $TABLE_NAME set $BALANCE_COL = $balance where $ACCOUNT_NUM_COL = $accountNum"
         db.execSQL(query)
     }
+
+    public fun readSendUserData(accountNum: String): Cursor{
+        val db: SQLiteDatabase = this.writableDatabase
+        val cursor: Cursor = db.rawQuery("select * from $TABLE_NAME where $ACCOUNT_NUM_COL != $accountNum",null)
+        return cursor
+
+    }
 }
