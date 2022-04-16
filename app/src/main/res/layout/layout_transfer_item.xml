@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="12dp"
+    android:background="@drawable/cardview_round"
+    android:id="@+id/cardView">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvfromaccountname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="From Vaibhav Shanbhag"
+            android:textColor="@color/background"
+            android:layout_margin="3dp"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tvtoaccountname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To: Shreyas Naik"
+            android:textColor="@color/background"
+            android:layout_margin="3dp"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tvamount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount: ₹10000/-"
+            android:textColor="@color/background"
+            android:layout_margin="3dp"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tvstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Success"
+            android:textColor="@color/success"
+            android:layout_margin="3dp"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -2,6 +2,7 @@ package com.example.moneytransferapp
 
 import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
@@ -30,20 +31,10 @@ class TransactionDatabaseHelper(context: Context?, factory: SQLiteDatabase.Curso
         }
     }
 
-    public fun insertTransferData(fromAccountName: String, toAccountName: String, amount: Int, status: Int): Boolean{
+    public fun readTransactionData(): Cursor{
         val db: SQLiteDatabase = this.writableDatabase
-        val contentValues: ContentValues = ContentValues()
+        val cursor: Cursor = db.rawQuery("select * from $TABLE_NAME",null)
 
-        contentValues.put(FROM_ACCOUNT_NAME_COL,fromAccountName)
-        contentValues.put(TO_ACCOUNT_NAME_COL,toAccountName)
-        contentValues.put(AMOUNT_COL,amount)
-        contentValues.put(STATUS_COL,status)
-
-        val result: Int = db.insert(TABLE_NAME,null,contentValues).toInt()
-
-        if(result == -1)
-            return false
-
-        return true
+        return cursor
     }
 }

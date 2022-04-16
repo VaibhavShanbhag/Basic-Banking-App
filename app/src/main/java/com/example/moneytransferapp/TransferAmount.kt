@@ -68,28 +68,33 @@ class TransferAmount : AppCompatActivity() {
 
             else{
                 val amountInt = Integer.parseInt(amountText)
-                val fromLeftBalance = fromAccountBalanceText - amountInt
-                val toAddedBalance = toAccountBalanceText + amountInt
-                userDbHelper.updateUserBalance(fromAccountNum,fromLeftBalance)
-                userDbHelper.updateUserBalance(toAccountNum,toAddedBalance)
-                val transactionDatabaseHelper = TransactionDatabaseHelper(this,null)
-                val db: SQLiteDatabase = transactionDatabaseHelper.writableDatabase
-                val contentValues = ContentValues()
 
-                contentValues.put(TransactionDatabaseHelper.FROM_ACCOUNT_NAME_COL, fromAccountNameText)
-                contentValues.put(TransactionDatabaseHelper.TO_ACCOUNT_NAME_COL, toAccountNameText)
-                contentValues.put(TransactionDatabaseHelper.AMOUNT_COL, amountInt)
-                contentValues.put(TransactionDatabaseHelper.STATUS_COL,1)
-
-                db.insert(TransactionDatabaseHelper.TABLE_NAME,null,contentValues)
-
-                Toast.makeText(this,"Transaction Successfull", Toast.LENGTH_SHORT).show()
-                Intent(this,MainActivity::class.java).also {
-                    startActivity(it)
-                    finish()
+                if(amountInt > fromAccountBalanceText){
+                    Toast.makeText(this,"Your Account Balance is $fromAccountBalanceText", Toast.LENGTH_SHORT).show()
                 }
 
+                else{
+                    val fromLeftBalance = fromAccountBalanceText - amountInt
+                    val toAddedBalance = toAccountBalanceText + amountInt
+                    userDbHelper.updateUserBalance(fromAccountNum,fromLeftBalance)
+                    userDbHelper.updateUserBalance(toAccountNum,toAddedBalance)
+                    val transactionDatabaseHelper = TransactionDatabaseHelper(this,null)
+                    val db: SQLiteDatabase = transactionDatabaseHelper.writableDatabase
+                    val contentValues = ContentValues()
 
+                    contentValues.put(TransactionDatabaseHelper.FROM_ACCOUNT_NAME_COL, fromAccountNameText)
+                    contentValues.put(TransactionDatabaseHelper.TO_ACCOUNT_NAME_COL, toAccountNameText)
+                    contentValues.put(TransactionDatabaseHelper.AMOUNT_COL, amountInt)
+                    contentValues.put(TransactionDatabaseHelper.STATUS_COL,1)
+
+                    db.insert(TransactionDatabaseHelper.TABLE_NAME,null,contentValues)
+
+                    Toast.makeText(this,"Transaction Successfull", Toast.LENGTH_SHORT).show()
+                    Intent(this,MainActivity::class.java).also {
+                        startActivity(it)
+                        finish()
+                    }
+                }
 
             }
         }
