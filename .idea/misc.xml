@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/Vaibhav/AndroidStudioProjects/MoneyTransferApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/Vaibhav/AndroidStudioProjects/MoneyTransferApp/app/src/main/res/drawable/bottom_nav_round.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/Vaibhav/AndroidStudioProjects/MoneyTransferApp/app/src/main/res/drawable/button_round.xml" value="0.2526041666666667" />
+        <entry key="..\:/Users/Vaibhav/AndroidStudioProjects/MoneyTransferApp/app/src/main/res/drawable/button_round_transfer.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/Vaibhav/AndroidStudioProjects/MoneyTransferApp/app/src/main/res/drawable/cardview_round.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/Vaibhav/AndroidStudioProjects/MoneyTransferApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/Vaibhav/AndroidStudioProjects/MoneyTransferApp/app/src/main/res/drawable/ic_person_background.xml" value="0.2526041666666667" />
@@ -12,7 +14,7 @@
         <entry key="..\:/Users/Vaibhav/AndroidStudioProjects/MoneyTransferApp/app/src/main/res/drawable/ic_transaction_foreground.xml" value="0.2526041666666667" />
         <entry key="..\:/Users/Vaibhav/AndroidStudioProjects/MoneyTransferApp/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/Vaibhav/AndroidStudioProjects/MoneyTransferApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.22239583333333332" />
-        <entry key="..\:/Users/Vaibhav/AndroidStudioProjects/MoneyTransferApp/app/src/main/res/layout/activity_user_account_details.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Vaibhav/AndroidStudioProjects/MoneyTransferApp/app/src/main/res/layout/activity_user_account_details.xml" value="0.264" />
         <entry key="..\:/Users/Vaibhav/AndroidStudioProjects/MoneyTransferApp/app/src/main/res/layout/layout_item.xml" value="0.4" />
         <entry key="..\:/Users/Vaibhav/AndroidStudioProjects/MoneyTransferApp/app/src/main/res/layout/toolbar.xml" value="0.264" />
         <entry key="..\:/Users/Vaibhav/AndroidStudioProjects/MoneyTransferApp/app/src/main/res/layout/transactions_fragment.xml" value="0.23645833333333333" />

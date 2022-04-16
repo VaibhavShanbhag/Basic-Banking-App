@@ -1,9 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UserAccountDetails">
+    tools:context=".UserAccountDetails"
+    android:background="@color/background">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <include layout="@layout/toolbar" />
+
+    <ImageView
+        android:id="@+id/ivuser"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="15dp"
+        android:src="@drawable/user" />
+
+    <LinearLayout
+        android:id="@+id/accountnum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/ivuser"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Account No"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/etaccountnum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="20220412"
+            android:textSize="17sp"
+            android:textColor="#8E9AA0"
+            android:background="@drawable/button_round"
+            android:padding="12dp"
+            android:layout_marginTop="7dp"
+            android:focusable="false"
+            android:clickable="false"
+            android:inputType="none"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/accountnum"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textSize="17sp"/>
+
+        <EditText
+            android:id="@+id/etaccountname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Vaibhav Shanbhag"
+            android:textSize="17sp"
+            android:textColor="#8E9AA0"
+            android:background="@drawable/button_round"
+            android:padding="12dp"
+            android:layout_marginTop="7dp"
+            android:focusable="false"
+            android:clickable="false"
+            android:inputType="none"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/useremail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/username"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Email"
+            android:textSize="17sp"/>
+
+        <EditText
+            android:id="@+id/etaccountemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="vaibhavshanbhag@gmail.com"
+            android:textSize="17sp"
+            android:textColor="#8E9AA0"
+            android:background="@drawable/button_round"
+            android:padding="12dp"
+            android:layout_marginTop="7dp"
+            android:focusable="false"
+            android:clickable="false"
+            android:inputType="none"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/useremail"
+        android:layout_margin="13dp"
+        android:layout_marginTop="14dp">
+
+        <TextView
+            android:id="@+id/tvbalance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Balance: ₹10000/-"
+            android:textSize="19sp"
+            android:gravity="center"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btntransfer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Transfer"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:background="@drawable/button_round_transfer"
+            app:backgroundTint="@color/button"
+            android:padding="12dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
+    </LinearLayout>
+</RelativeLayout>

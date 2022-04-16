@@ -35,8 +35,8 @@ class UserDatabaseHelper(context: Context?, factory: SQLiteDatabase.CursorFactor
         db?.execSQL("insert into $TABLE_NAME values('20220421','Vikram Rathore','vikramrathore@gmail.com',17000)")
         db?.execSQL("insert into $TABLE_NAME values('20220423','Vishwajeet Tekale','vishwajeettekale@gmail.com',25000)")
         db?.execSQL("insert into $TABLE_NAME values('20220425','Peter Parkar','peterparkar@gmail.com',5000)")
-        db?.execSQL("insert into $TABLE_NAME values('20220427','Shivam Dubey','peterparkar@gmail.com',6500)")
-        db?.execSQL("insert into $TABLE_NAME values('20220424','Sagar Iyer','peterparkar@gmail.com',3000)")
+        db?.execSQL("insert into $TABLE_NAME values('20220427','Shivam Dubey','shivamdubey@gmail.com',6500)")
+        db?.execSQL("insert into $TABLE_NAME values('20220424','Sagar Iyer','sagariyer@gmail.com',3000)")
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {

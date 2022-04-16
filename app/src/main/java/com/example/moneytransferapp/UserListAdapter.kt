@@ -29,8 +29,7 @@ class UserListAdapter(var context: Context?, var userClassArrayList: ArrayList<U
             tvaccountnumber.text = "Account No: ".plus(userClassArrayList.get(position).accountNum)
             tvaccountname.text = userClassArrayList.get(position).name
             tvaccountmail.text = userClassArrayList.get(position).email
-            tvaccountbalance.text = "Balance: ₹".plus(userClassArrayList.get(position).balance)
-
+            tvaccountbalance.text = "Balance: ₹".plus(userClassArrayList.get(position).balance).plus("/-")
         }
     }
 
