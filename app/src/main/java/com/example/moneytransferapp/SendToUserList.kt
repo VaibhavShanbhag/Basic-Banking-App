@@ -24,6 +24,10 @@ class SendToUserList : AppCompatActivity() {
 
         displaytoolBarName(accountNum)
 
+        leftIcon.setOnClickListener {
+            finish()
+        }
+
         recyclerView = findViewById(R.id.userlisttransfer)
         sendUserArrayList = ArrayList<SendUserModelClass>()
 
