@@ -63,6 +63,7 @@ class TransactionFragment: Fragment() {
 
             transactionClassArrayList.add(TransactionModelClass(fromAccountText,toAccountNameText,amountInt,statusInt))
         }
+        transactionClassArrayList.reverse()
         transactionListAdapter.notifyDataSetChanged()
     }
 }

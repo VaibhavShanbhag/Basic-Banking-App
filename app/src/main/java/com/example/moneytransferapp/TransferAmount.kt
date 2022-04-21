@@ -62,7 +62,7 @@ class TransferAmount : AppCompatActivity() {
         btntransfer.setOnClickListener {
             val amountText = etamount.text.toString()
 
-            if(amountText.equals("") || amountText.equals("0")){
+            if(amountText.equals("") || amountText.equals("0") || amountText.equals("00") || amountText.equals("000") || amountText.equals("0000") || amountText.equals("00000")){
                 Toast.makeText(this,"Transfer should be atleast of ₹1", Toast.LENGTH_SHORT).show()
             }
 
